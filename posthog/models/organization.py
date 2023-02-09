@@ -144,7 +144,7 @@ class Organization(UUIDModel):
             License = None  # type: ignore
         # Demo gets all features
         if settings.DEMO or "generate_demo_data" in sys.argv[1:2]:
-            return (License.ENTERPRISE_PLAN, "demo")
+            return (License.ENTERPRISE_PLAN, "ee")
         # If on Cloud, grab the organization's price
         if hasattr(self, "billing"):
             if self.billing is None:  # type: ignore
